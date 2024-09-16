@@ -1,0 +1,124 @@
+html,body{
+    text-align: center;
+}
+
+body{
+    background-color: lightsalmon;
+    height: 100%;
+}
+
+/* Layout */
+.container{
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 10% 90% 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container , header , nav, main, footer{
+    border: 1px solid black;
+}
+
+footer{
+    height: 20px;
+}
+
+/* --------------------------------- */
+
+header,footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+.navContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: larger;
+    padding-top: 20px;
+}
+
+.navContainer > a:active  {
+    color: aqua; /* Color when clicked */
+}
+
+.navContainer > a:focus {
+    color: aqua; /* Color when clicked */
+}
+
+header,footer{
+    grid-column: span 3; /* Span over 3 columns */
+}
+
+main{
+    grid-column: span 2; /* Span over 3 columns */
+}
+
+
+/* -------------------------- Store -----------------------------------------*/
+.image-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping into rows */
+    justify-content: space-between; /* Evenly space the images */
+    gap: 10px; /* Space between images */
+    width: 90%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the grid */
+}
+
+.image-grid img {
+    width: calc(20% - 10px); /* Each image takes 20% of the row minus the gap */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Crop and cover the container */
+    display: block; /* Remove extra space below images */
+    border: 1px solid black;
+    box-sizing: border-box; /* Ensure padding/margin is included in the width calculation */
+}
+
+
+main > p{
+    text-align: left;
+    margin: 20px;
+
+}
+
+
+/* ------------------------- Contact us -----------------------------------------------*/
+
+form{
+    width: 30%;
+}
+
+.formContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Basic grid container setup */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Two columns */
+    grid-template-rows: auto auto auto; /* Three rows */
+}
+
+/* Basic styling for grid items */
+.grid-item {
+    /* Basic styling; remove if not needed */
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure input and textarea fill their grid cells */
+input[type="text"], textarea, input[type="button"]{
+    margin: 7px;
+    width: 89%;
+}
